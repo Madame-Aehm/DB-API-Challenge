@@ -1,0 +1,42 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.container {
+  border: solid 1px black;
+  padding: 0.5em 1em;
+  display: flex;
+  gap: 1em;
+}
+
+.align {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+@media (max-width: 650px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 260px) {
+  .align {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
